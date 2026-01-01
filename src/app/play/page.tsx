@@ -187,7 +187,7 @@ export default function PlayPage() {
 
         <div
           className="relative mt-2 flex flex-1 flex-col items-center justify-center"
-          style={{ padding: "24px", gap: "24px" }}
+          style={{ padding: "24px", gap: "24px", overscrollBehavior: "contain" }}
         >
           <div
             className="relative w-full"
@@ -239,6 +239,8 @@ export default function PlayPage() {
                     : "none",
                 boxShadow: "0 20px 40px rgba(0,0,0,0.18)",
                 zIndex: 1,
+                touchAction: "pan-y",
+                overscrollBehavior: "contain",
               }}
               onPointerDown={disableInteractions ? undefined : handlePointerDown}
               onPointerMove={disableInteractions ? undefined : handlePointerMove}
