@@ -124,9 +124,9 @@ export default function PlayPage() {
       return;
     }
     if (dragX > 60) {
-      handleAnswer("agree", 1);
+      handleAnswer("agree");
     } else if (dragX < -60) {
-      handleAnswer("disagree", -1);
+      handleAnswer("disagree");
     }
     setDragStart(null);
     setDragX(0);
